@@ -9,7 +9,7 @@ const RotatingModel = (props) => {
   
   useFrame(() => {
     if (modelRef.current) {
-      modelRef.current.rotation.y += 0.005 // Adjust speed here
+      modelRef.current.rotation.y += 0.005
     }
   })
   
@@ -28,8 +28,7 @@ const Home = () => {
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
-          <RotatingModel scale={0.04} position={[-0.15, 1.5, 0]}/>
-          
+          <RotatingModel scale={0.04} position={[-0.11, 1.5, 0]}/>
           <OrbitControls enableZoom={false}/>
         </Suspense>
       </Canvas>
