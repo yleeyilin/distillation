@@ -1,8 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <header className="header flex justify-between items-center px-10 py-5">
+    <header className="header flex justify-between items-center px-10 py-5 bg-black/80 backdrop-blur-md z-50">
         {/* Logo */}
         <NavLink to="/" className="text-3xl rounded-lg items-center justify-center flex font-bold">
             <p className="bg-clip-text text-transparent bg-linear-to-r from-blue-600 to-purple-600 font-bold">

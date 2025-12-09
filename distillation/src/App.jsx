@@ -5,9 +5,10 @@ import NavBar from './components/NavBar'
 
 function App() {
   return (
-    <main className="bg-black">
+    <main className="bg-black min-h-screen">
       <BrowserRouter>
-        <NavBar />
+        <div className='fixed top-0 left-0 w-full z-10'><NavBar/></div>
+
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/about" element={<About />}/>
