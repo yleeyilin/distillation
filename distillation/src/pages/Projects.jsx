@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Projects = () => {
   return (
@@ -7,7 +7,7 @@ const Projects = () => {
         projects page
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

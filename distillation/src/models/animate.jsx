@@ -4,53 +4,152 @@ Command: npx gltfjsx@6.5.3 mobile_home.glb --transform
 Files: mobile_home.glb [119.67MB] > /Users/leeyilin/Downloads/mobile_home-transformed.glb [4.37MB] (96%)
 */
 
-import React, { useEffect } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
-import { a } from '@react-spring/three'
-import modelScene from '../assets/mobile_home-transformed.glb'
+import React, { useEffect } from "react";
+import { useGLTF, useAnimations } from "@react-three/drei";
+import { a } from "@react-spring/three";
+import modelScene from "../assets/mobile_home-transformed.glb";
 
 const Model = (props) => {
-  const group = React.useRef()
-  const { nodes, materials, animations } = useGLTF(modelScene)
-  const { actions } = useAnimations(animations, group)
+  const group = React.useRef();
+  const { nodes, materials, animations } = useGLTF(modelScene);
+  const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    Object.values(actions).forEach(action => action?.play())
-  }, [actions])
+    Object.values(actions).forEach((action) => action?.play());
+  }, [actions]);
 
   return (
-    <a.group ref={group} {...props} >
+    <a.group ref={group} {...props}>
       <a.group name="Sketchfab_Scene">
-        <a.group name="Object_23" position={[-1.541, 0.667, 6.061]} rotation={[Math.PI / 2, 0, -Math.PI / 2]}>
+        <a.group
+          name="Object_23"
+          position={[-1.541, 0.667, 6.061]}
+          rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+        >
           <a.group name="arm_A_00" rotation={[Math.PI / 2, 0, -1.316]}>
-            <a.group name="arm_B_01" position={[0, 11.194, 0]} rotation={[0, 0, 1.479]}>
-              <a.group name="building_D_pipes003" rotation={[-Math.PI / 2, 0.744, -Math.PI / 2]}>
-                <mesh name="building_D_pipes003_pipes_moving_baked_0" geometry={nodes.building_D_pipes003_pipes_moving_baked_0.geometry} material={materials.pipes_moving_baked} />
+            <a.group
+              name="arm_B_01"
+              position={[0, 11.194, 0]}
+              rotation={[0, 0, 1.479]}
+            >
+              <a.group
+                name="building_D_pipes003"
+                rotation={[-Math.PI / 2, 0.744, -Math.PI / 2]}
+              >
+                <mesh
+                  name="building_D_pipes003_pipes_moving_baked_0"
+                  geometry={
+                    nodes.building_D_pipes003_pipes_moving_baked_0.geometry
+                  }
+                  material={materials.pipes_moving_baked}
+                />
               </a.group>
             </a.group>
-            <a.group name="building_D_pipes002" rotation={[-Math.PI / 2, -0.856, -Math.PI / 2]}>
-              <mesh name="building_D_pipes002_pipes_moving_baked_0" geometry={nodes.building_D_pipes002_pipes_moving_baked_0.geometry} material={materials.pipes_moving_baked} />
+            <a.group
+              name="building_D_pipes002"
+              rotation={[-Math.PI / 2, -0.856, -Math.PI / 2]}
+            >
+              <mesh
+                name="building_D_pipes002_pipes_moving_baked_0"
+                geometry={
+                  nodes.building_D_pipes002_pipes_moving_baked_0.geometry
+                }
+                material={materials.pipes_moving_baked}
+              />
             </a.group>
           </a.group>
-          <a.group name="home_02" position={[9.213, 0, 12.662]} rotation={[Math.PI / 2, 0, -Math.PI / 2]}>
-            <a.group name="building_D_pipes001" rotation={[0, -1.571, 0]} scale={1.052}>
-              <mesh name="building_D_pipes001_house_baked_0" geometry={nodes.building_D_pipes001_house_baked_0.geometry} material={materials.house_baked} />
-              <mesh name="building_D_pipes001_pipes_moving_baked_0" geometry={nodes.building_D_pipes001_pipes_moving_baked_0.geometry} material={materials.pipes_moving_baked} />
-              <mesh name="building_D_pipes001_flame_0" geometry={nodes.building_D_pipes001_flame_0.geometry} material={materials.flame} />
+          <a.group
+            name="home_02"
+            position={[9.213, 0, 12.662]}
+            rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+          >
+            <a.group
+              name="building_D_pipes001"
+              rotation={[0, -1.571, 0]}
+              scale={1.052}
+            >
+              <mesh
+                name="building_D_pipes001_house_baked_0"
+                geometry={nodes.building_D_pipes001_house_baked_0.geometry}
+                material={materials.house_baked}
+              />
+              <mesh
+                name="building_D_pipes001_pipes_moving_baked_0"
+                geometry={
+                  nodes.building_D_pipes001_pipes_moving_baked_0.geometry
+                }
+                material={materials.pipes_moving_baked}
+              />
+              <mesh
+                name="building_D_pipes001_flame_0"
+                geometry={nodes.building_D_pipes001_flame_0.geometry}
+                material={materials.flame}
+              />
             </a.group>
           </a.group>
         </a.group>
-        <mesh name="BezierCurve003_foliage_baked_0" geometry={nodes.BezierCurve003_foliage_baked_0.geometry} material={materials.foliage_baked} position={[12.087, 2.057, -19.189]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} scale={[0.735, 1.142, 0.735]} />
-        <mesh name="building_D_pipes_pipes_moving_baked_0" geometry={nodes.building_D_pipes_pipes_moving_baked_0.geometry} material={materials.pipes_moving_baked} position={[0.71, -12.092, 5.175]} rotation={[Math.PI / 2, 0, Math.PI]} />
-        <mesh name="rock_left_stones_0" geometry={nodes.rock_left_stones_0.geometry} material={materials.stones} position={[-11.293, -51.105, 49.558]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} />
-        <mesh name="stone_small_C001_rock_top_baked_0" geometry={nodes.stone_small_C001_rock_top_baked_0.geometry} material={materials.rock_top_baked} position={[-11.293, -51.105, 49.558]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} />
-        <mesh name="stone_small_C002_rock_right_baked_0" geometry={nodes.stone_small_C002_rock_right_baked_0.geometry} material={materials.rock_right_baked} position={[-11.293, -51.105, 49.558]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} />
-        <mesh name="rock_middle_rock_middle_baked_0" geometry={nodes.rock_middle_rock_middle_baked_0.geometry} material={materials.rock_middle_baked} position={[-11.293, -51.105, 49.558]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} />
-        <mesh name="bridge_suspended002_platform_calm_0" geometry={nodes.bridge_suspended002_platform_calm_0.geometry} material={materials.platform_calm} position={[-23.517, -10.786, 31.78]} rotation={[Math.PI / 2, 0, -2.834]} />
-        <mesh name="bridge_suspended010_platform_unstable_baked_0" geometry={nodes.bridge_suspended010_platform_unstable_baked_0.geometry} material={materials.platform_unstable_baked} position={[6.419, -7.556, -52.069]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} />
+        <mesh
+          name="BezierCurve003_foliage_baked_0"
+          geometry={nodes.BezierCurve003_foliage_baked_0.geometry}
+          material={materials.foliage_baked}
+          position={[12.087, 2.057, -19.189]}
+          rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+          scale={[0.735, 1.142, 0.735]}
+        />
+        <mesh
+          name="building_D_pipes_pipes_moving_baked_0"
+          geometry={nodes.building_D_pipes_pipes_moving_baked_0.geometry}
+          material={materials.pipes_moving_baked}
+          position={[0.71, -12.092, 5.175]}
+          rotation={[Math.PI / 2, 0, Math.PI]}
+        />
+        <mesh
+          name="rock_left_stones_0"
+          geometry={nodes.rock_left_stones_0.geometry}
+          material={materials.stones}
+          position={[-11.293, -51.105, 49.558]}
+          rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+        />
+        <mesh
+          name="stone_small_C001_rock_top_baked_0"
+          geometry={nodes.stone_small_C001_rock_top_baked_0.geometry}
+          material={materials.rock_top_baked}
+          position={[-11.293, -51.105, 49.558]}
+          rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+        />
+        <mesh
+          name="stone_small_C002_rock_right_baked_0"
+          geometry={nodes.stone_small_C002_rock_right_baked_0.geometry}
+          material={materials.rock_right_baked}
+          position={[-11.293, -51.105, 49.558]}
+          rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+        />
+        <mesh
+          name="rock_middle_rock_middle_baked_0"
+          geometry={nodes.rock_middle_rock_middle_baked_0.geometry}
+          material={materials.rock_middle_baked}
+          position={[-11.293, -51.105, 49.558]}
+          rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+        />
+        <mesh
+          name="bridge_suspended002_platform_calm_0"
+          geometry={nodes.bridge_suspended002_platform_calm_0.geometry}
+          material={materials.platform_calm}
+          position={[-23.517, -10.786, 31.78]}
+          rotation={[Math.PI / 2, 0, -2.834]}
+        />
+        <mesh
+          name="bridge_suspended010_platform_unstable_baked_0"
+          geometry={
+            nodes.bridge_suspended010_platform_unstable_baked_0.geometry
+          }
+          material={materials.platform_unstable_baked}
+          position={[6.419, -7.556, -52.069]}
+          rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+        />
       </a.group>
     </a.group>
-  )
-}
+  );
+};
 
-export default Model
+export default Model;
