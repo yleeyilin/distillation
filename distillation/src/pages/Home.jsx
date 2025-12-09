@@ -1,8 +1,24 @@
-import React, { Suspense } from 'react'
-import { Canvas } from '@react-three/fiber'
+import React, { Suspense, useRef } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import Loader from '../components/Loader'
 import Model from '../models/animate'
+
+const RotatingModel = (props) => {
+  const modelRef = useRef()
+  
+  useFrame(() => {
+    if (modelRef.current) {
+      modelRef.current.rotation.y += 0.005 // Adjust speed here
+    }
+  })
+  
+  return (
+    <group ref={modelRef}>
+      <Model {...props} />
+    </group>
+  )
+}
 
 const Home = () => {
   return (
@@ -12,15 +28,9 @@ const Home = () => {
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
-          <directionalLight />
-          <ambientLight />
-          <pointLight />
-          <spotLight />
-          <hemisphereLight />
-
-          <Model scale={0.05}/>
+          <RotatingModel scale={0.04} position={[-0.15, 1.5, 0]}/>
           
-          <OrbitControls />
+          <OrbitControls enableZoom={false}/>
         </Suspense>
       </Canvas>
     </section>
