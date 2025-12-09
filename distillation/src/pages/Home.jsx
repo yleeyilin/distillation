@@ -5,13 +5,16 @@ import Loader from '../components/Loader'
 const Home = () => {
   return (
     <section className="relative w-full h-screen">
-      <script type="module" src="./animate.js"></script>
       <Canvas
         className="absolute inset-0 w-full h-full bg-transparent z-0"
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader/>}>
-
+          <directionalLight />
+          <ambientLight />
+          <pointLight />
+          <spotLight />
+          <hemisphereLight />
         </Suspense>
       </Canvas>
     </section>
