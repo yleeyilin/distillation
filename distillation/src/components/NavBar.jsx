@@ -11,7 +11,7 @@ const NavBar = () => {
         </NavLink>
 
         {/* Nav links */}
-        <nav className="flex text-lg gap-10 font-medium border border-green-700 rounded-full px-10 items-center p-4 hover:border-gray-200 transition-all duration-300 ease-in-out">
+        <nav className="flex text-lg gap-10 font-medium border border-blue-900 rounded-full px-10 items-center p-4 hover:border-gray-200 transition-all duration-300 ease-in-out">
             <NavLink to="/">
                 <p className="relative 
                             after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
