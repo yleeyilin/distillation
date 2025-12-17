@@ -61,7 +61,7 @@ const NavBar = () => {
           href="https://www.linkedin.com/in/yilinnlee"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:bg-green-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out"
+          className="hover:bg-blue-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out"
         >
           <svg
             className="w-6 h-6 text-gray-500 dark:text-white hover:scale-120"
@@ -86,7 +86,7 @@ const NavBar = () => {
           href="https://github.com/yleeyilin"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:bg-green-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out"
+          className="hover:bg-blue-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out"
         >
           <svg
             class="w-6 h-6 text-gray-500 dark:text-white hover:scale-120"
@@ -110,7 +110,7 @@ const NavBar = () => {
           href="mailto:leeyilin@u.nus.edu"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:bg-green-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out"
+          className="hover:bg-blue-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out"
         >
           <svg
             className="w-6 h-6 text-gray-500 dark:text-white hover:scale-120"
