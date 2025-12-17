@@ -20,9 +20,15 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.logo-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+}
+
 .section-title {
   font-family: "Poppins", sans-serif;
-  font-size: 46px;
+  font-size: 40px;
   font-weight: bold;
 }
 

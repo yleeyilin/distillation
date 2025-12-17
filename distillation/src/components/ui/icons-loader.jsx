@@ -84,7 +84,7 @@ const Skeleton = () => {
         </Container>
       </div>
       <div
-        className="h-20 w-px absolute top-5 m-auto z-40 bg-linear-to-b from-transparent to-transparent animate-move">
+        className="h-15 w-px absolute top-5 m-auto z-40 bg-linear-to-b from-transparent to-transparent animate-move">
         <div className="w-10 h-32 top-1/2 -translate-y-1/2 absolute -left-10">
           <Sparkles />
         </div>
@@ -136,7 +136,7 @@ export const CardSkeletonContainer = ({
 }) => {
   return (
     <div
-      className={cn("h-30 rounded-xl z-40", className, showGradient &&
+      className={cn("h-20 rounded-xl z-40", className, showGradient &&
         "bg-neutral-300 dark:bg-[rgba(40,40,40,0.70)] mask-[radial-gradient(50%_50%_at_50%_50%,white_0%,transparent_100%)]")}>
       {children}
     </div>

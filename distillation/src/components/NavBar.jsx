@@ -8,7 +8,7 @@ const NavBar = () => {
         to="/"
         className="text-3xl rounded-lg items-center justify-center flex font-bold"
       >
-        <p className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700 font-bold">
+        <p className="logo-title bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700 ">
           Yi Lin Lee
         </p>
       </NavLink>

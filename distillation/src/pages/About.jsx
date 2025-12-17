@@ -5,7 +5,9 @@ const About = () => {
   const who = (
     <p className="text-xl">
       I am currently a <b>final year computer science student </b> at NUS, 
-      specialising in parallel computing and software engineering. 
+      specialising in parallel computing and software engineering.
+      Outside of school, I also love building projects and experimenting 
+      with <b>scalable systems, cool algorithms, and new technologies</b>!
     </p>
   )
 
@@ -24,11 +26,10 @@ const About = () => {
 
   return (
     <section className="w-full h-screen relative">
-      <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
+      <div className="absolute top-28 left-50 right-50 z-10 flex items-center justify-center">
         <div className="space-y-2">
           <span className="section-title bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700 font-bold">/ about me</span>
-          {[who, what]}
-          {[tools]}
+          {[who, tools]}
           <IconCard />
         </div>
       </div>
