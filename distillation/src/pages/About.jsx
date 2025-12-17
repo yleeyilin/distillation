@@ -44,12 +44,12 @@ const About = () => {
             backgroundColor="#000000"
             dropoutStrength={0}
             interactive
-            distortionStrength={3}
-            distortionRadius={80}
+            distortionStrength={0}
+            distortionRadius={0}
             distortionMode="swirl"
-            followSpeed={0.2}
-            jitterStrength={4}
-            jitterSpeed={4}
+            followSpeed={0}
+            jitterStrength={0}
+            jitterSpeed={0}
             sampleAverage
             tintColor="#FFFFFF"
             tintStrength={0.2}
