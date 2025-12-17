@@ -52,7 +52,7 @@ const About = () => {
             jitterSpeed={0}
             sampleAverage
             tintColor="#FFFFFF"
-            tintStrength={0.2}
+            tintStrength={0.05}
             className="rounded-xl border border-neutral-800 shadow-lg"
           />
         </div>
