@@ -34,6 +34,15 @@ const NavBar = () => {
             About
           </p>
         </NavLink>
+        <NavLink to="/experience">
+          <p
+            className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
+                            after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
+                            hover:after:scale-x-100 text-gray-200"
+          >
+            Experience
+          </p>
+        </NavLink>
         <NavLink to="/projects">
           <p
             className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
@@ -41,15 +50,6 @@ const NavBar = () => {
                             hover:after:scale-x-100 text-gray-200"
           >
             Projects
-          </p>
-        </NavLink>
-        <NavLink to="/contact">
-          <p
-            className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
-                            after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
-                            hover:after:scale-x-100 text-gray-200"
-          >
-            Contact
           </p>
         </NavLink>
       </nav>

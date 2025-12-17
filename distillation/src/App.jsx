@@ -6,13 +6,13 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
-import { Home, About, Projects, Contact } from "./pages";
+import { Home, About, Projects, Experience } from "./pages";
 import NavBar from "./components/NavBar";
 import { AnimatePresence } from "framer-motion";
 import PageTransition from "./components/PageTransition";
 import { useEffect, useState, useRef, createContext, useContext } from "react";
 
-const routes = ["/", "/about", "/projects", "/contact"];
+const routes = ["/", "/about", "/experience", "/projects"];
 
 const ScrollDirectionContext = createContext("forward");
 
@@ -92,18 +92,18 @@ function AnimatedRoutes() {
           }
         />
         <Route
-          path="/projects"
+          path="/experience"
           element={
             <PageTransition direction={direction}>
-              <Projects />
+              <Experience />
             </PageTransition>
           }
         />
         <Route
-          path="/contact"
+          path="/projects"
           element={
             <PageTransition direction={direction}>
-              <Contact />
+              <Projects />
             </PageTransition>
           }
         />
