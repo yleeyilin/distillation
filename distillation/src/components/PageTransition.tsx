@@ -21,7 +21,10 @@ export default function PageTransition({ children, direction }) {
       initial={currentVariant.initial}
       animate={currentVariant.animate}
       exit={currentVariant.exit}
-      transition={{ duration: 0.3 }}
+      transition={{ 
+        duration: 0.3,
+        ease: [0.43, 0.13, 0.23, 0.96]
+     }}
     >
       {children}
     </motion.div>
