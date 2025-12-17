@@ -1,36 +1,60 @@
 import React from "react";
 import { IconCard } from "../components/ui/icons-loader";
+import { PixelatedCanvas } from "../components/ui/pixelated-canvas";
+import headshot from '../assets/headshot.jpg'; 
 
 const About = () => {
   const who = (
     <p className="text-xl">
-      I am currently a <b>final year computer science student </b> at NUS, 
-      specialising in parallel computing and software engineering.
-      Outside of school, I also love building projects and experimenting 
-      with <b>scalable systems, cool algorithms, and new technologies</b>!
+      I am currently a <b>final year computer science student </b> at NUS,
+      specialising in parallel computing and software engineering. Outside of
+      school, I also love building projects and experimenting with{" "}
+      <b>scalable systems, cool algorithms, and new technologies</b>!
     </p>
-  )
+  );
 
   const tools = (
     <p className="text-xl">
       Here are some technologies I have been working with:
     </p>
-  )
-
-  const what = (
-    <p className="text-xl">
-      Outside of school, I also love building projects and experimenting 
-      with <b>scalable systems, cool algorithms, and new technologies</b>!
-    </p>
-  )
+  );
 
   return (
     <section className="w-full h-screen relative">
-      <div className="absolute top-28 left-50 right-50 z-10 flex items-center justify-center">
-        <div className="space-y-2">
-          <span className="section-title bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700 font-bold">/ about me</span>
-          {[who, tools]}
+      <div className="absolute top-30 left-1/2 transform -translate-x-1/2 z-10 flex items-center justify-between w-3/5">
+        {/* Left side --> about text */}
+        <div className="space-y-2 px-5">
+          <span className="section-title bg-clip-text text-transparent bg-linear-to-r from-green-700 to-blue-700 font-bold">
+            / about me
+          </span>
+          <div className="flex"></div>
+          {[who, <div className="flex"></div>, tools]}
           <IconCard />
+        </div>
+
+        {/* Right side --> Image */}
+        <div >
+          <PixelatedCanvas
+            src={headshot}
+            width={400}
+            height={500}
+            cellSize={3}
+            dotScale={0.9}
+            shape="square"
+            backgroundColor="#000000"
+            dropoutStrength={0}
+            interactive
+            distortionStrength={3}
+            distortionRadius={80}
+            distortionMode="swirl"
+            followSpeed={0.2}
+            jitterStrength={4}
+            jitterSpeed={4}
+            sampleAverage
+            tintColor="#FFFFFF"
+            tintStrength={0.2}
+            className="rounded-xl border border-neutral-800 shadow-lg"
+          />
         </div>
       </div>
     </section>
