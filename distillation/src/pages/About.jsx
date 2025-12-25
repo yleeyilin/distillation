@@ -27,7 +27,7 @@ const About = () => {
   const tools = (
     <p className="text-lg sm:text-xl">
       Tools I have experience with:
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 space-y-4">
+      <div className="grid grid-cols-2 gap-6 space-y-4">
         <ul className="space-y-2">
           {backendTools.map((tech) => (
             <li key={tech} className="flex items-center space-x-2">
