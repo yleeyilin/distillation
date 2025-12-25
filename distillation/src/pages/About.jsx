@@ -15,7 +15,7 @@ const About = () => {
 
   const tools = (
     <p className="text-lg sm:text-xl">
-      Here are some technologies I have been working with:
+      Here are some languages I have been working with:
     </p>
   );
 
@@ -31,6 +31,7 @@ const About = () => {
           {who}
           {tools}
 
+          {/* display languages */}
           <IconCard />
         </div>
 
