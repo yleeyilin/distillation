@@ -5,7 +5,7 @@ import headshot from "../assets/headshot.jpg";
 
 const About = () => {
   const who = (
-    <p className="text-lg sm:text-xl">
+    <p className="text-base sm:text-lg">
       I am currently a final year computer science student at NUS, specialising
       in parallel computing and software engineering. Outside of school, I also
       love building projects and experimenting with scalable systems, cool
@@ -14,7 +14,7 @@ const About = () => {
   );
 
   const languages = (
-    <p className="text-lg sm:text-xl">
+    <p className="text-base sm:text-lg">
       Languages:
       {/* display languages */}
       <IconCard />
@@ -25,16 +25,16 @@ const About = () => {
   const appTools = ["React", "Flutter", "Jetpack Compose"];
 
   const tools = (
-    <p className="text-lg sm:text-xl">
+    <p className="text-base sm:text-lg">
       Tools I have experience with:
       <div className="grid grid-cols-2 gap-6 space-y-4">
         <ul className="space-y-2">
           {backendTools.map((tech) => (
             <li key={tech} className="flex items-center space-x-2">
               <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">
-                {"\u25B6"}
+                {"\u25B7"}
               </span>
-              <span className="text-lg">{tech}</span>
+              <span className="text-base">{tech}</span>
             </li>
           ))}
         </ul>
@@ -43,9 +43,9 @@ const About = () => {
           {appTools.map((tech) => (
             <li key={tech} className="flex items-center space-x-2">
               <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">
-                {"\u25B6"}
+                {"\u25B7"}
               </span>
-              <span className="text-lg">{tech}</span>
+              <span className="text-base">{tech}</span>
             </li>
           ))}
         </ul>
