@@ -1,15 +1,15 @@
 import React from "react";
 import { IconCard } from "../components/ui/icons-loader";
 import { PixelatedCanvas } from "../components/ui/pixelated-canvas";
-import headshot from '../assets/headshot.jpg'; 
+import headshot from "../assets/headshot.jpg";
 
 const About = () => {
   const who = (
     <p className="text-lg sm:text-xl">
-      I am currently a final year computer science student at NUS,
-      specialising in parallel computing and software engineering. Outside of
-      school, I also love building projects and experimenting with{" "}
-      scalable systems, cool algorithms, and new technologies!
+      I am currently a final year computer science student at NUS, specialising
+      in parallel computing and software engineering. Outside of school, I also
+      love building projects and experimenting with scalable systems, cool
+      algorithms, and new technologies!
     </p>
   );
 
@@ -17,7 +17,7 @@ const About = () => {
     <p className="text-lg sm:text-xl">
       Languages:
       {/* display languages */}
-      <IconCard/>
+      <IconCard />
     </p>
   );
 
@@ -27,12 +27,13 @@ const About = () => {
   const tools = (
     <p className="text-lg sm:text-xl">
       Tools I have experience with:
-
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 space-y-4">
         <ul className="space-y-2">
           {backendTools.map((tech) => (
             <li key={tech} className="flex items-center space-x-2">
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">{'\u25B6'}</span> 
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">
+                {"\u25B6"}
+              </span>
               <span className="text-lg">{tech}</span>
             </li>
           ))}
@@ -41,7 +42,9 @@ const About = () => {
         <ul className="space-y-2">
           {appTools.map((tech) => (
             <li key={tech} className="flex items-center space-x-2">
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">{'\u25B6'}</span>
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">
+                {"\u25B6"}
+              </span>
               <span className="text-lg">{tech}</span>
             </li>
           ))}

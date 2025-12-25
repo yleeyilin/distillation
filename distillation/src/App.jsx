@@ -24,44 +24,61 @@ function ScrollHandlerWithContext({ setDirection }) {
 
   useEffect(() => {
     const currentIndex = routes.indexOf(location.pathname);
-    let scrollDelta = 0;
+    let startY = 0;
+    let endY = 0;
+
+    const handleTouchStart = (e) => {
+      startY = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = () => {
+      const deltaY = startY - endY;
+
+      if (Math.abs(deltaY) < 50 || isScrolling) return;
+
+      setIsScrolling(true);
+
+      if (deltaY > 0 && currentIndex < routes.length - 1) {
+        setDirection("forward");
+        navigate(routes[currentIndex + 1]);
+      } else if (deltaY < 0 && currentIndex > 0) {
+        setDirection("backward");
+        navigate(routes[currentIndex - 1]);
+      }
+
+      setTimeout(() => setIsScrolling(false), 600);
+    };
+
+    const handleTouchMove = (e) => {
+      endY = e.touches[0].clientY;
+    };
 
     const handleWheel = (e) => {
       e.preventDefault();
-
       if (isScrolling) return;
 
-      scrollDelta += e.deltaY;
-
-      if (scrollTimeout.current) {
-        clearTimeout(scrollTimeout.current);
+      if (e.deltaY > 0 && currentIndex < routes.length - 1) {
+        setDirection("forward");
+        navigate(routes[currentIndex + 1]);
+      } else if (e.deltaY < 0 && currentIndex > 0) {
+        setDirection("backward");
+        navigate(routes[currentIndex - 1]);
       }
 
-      scrollTimeout.current = setTimeout(() => {
-        if (Math.abs(scrollDelta) > 0) {
-          setIsScrolling(true);
-
-          if (scrollDelta > 0 && currentIndex < routes.length - 1) {
-            setDirection("forward");
-            navigate(routes[currentIndex + 1]);
-          } else if (scrollDelta < 0 && currentIndex > 0) {
-            setDirection("backward");
-            navigate(routes[currentIndex - 1]);
-          }
-
-          setTimeout(() => setIsScrolling(false), 600);
-        }
-
-        scrollDelta = 0;
-      }, 20);
+      setIsScrolling(true);
+      setTimeout(() => setIsScrolling(false), 600);
     };
 
     window.addEventListener("wheel", handleWheel, { passive: false });
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchend", handleTouchEnd);
+
     return () => {
       window.removeEventListener("wheel", handleWheel);
-      if (scrollTimeout.current) {
-        clearTimeout(scrollTimeout.current);
-      }
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleTouchEnd);
     };
   }, [location.pathname, isScrolling, navigate, setDirection]);
 
