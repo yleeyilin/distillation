@@ -47,7 +47,7 @@ const Home = () => {
       </BackgroundBeamsWithCollision>
 
       {/* Intro text */}
-      <p className="mx-auto max-w-lg py-20 text-6xl text-center">
+      <p className="mx-auto max-w-lg py-20 text-3xl sm:text-6xl text-center">
         <EncryptedText
           text="hi,"
           encryptedClassName="text-neutral-500"

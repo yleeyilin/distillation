@@ -20,8 +20,8 @@ const About = () => {
   );
 
   return (
-    <section className="w-full h-screen relative">
-      <div className="absolute top-30 left-1/2 transform -translate-x-1/2 z-10 flex items-center justify-between w-3/5">
+    <section className="min-h-screen grid place-items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-3/5 items-center">
         {/* Left side --> about text */}
         <div className="space-y-2 px-5">
           <span className="section-title bg-clip-text text-transparent bg-linear-to-r from-green-700 to-blue-700 font-bold">
@@ -33,7 +33,7 @@ const About = () => {
         </div>
 
         {/* Right side --> Image */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex justify-end">
           <PixelatedCanvas
             src={headshot}
             width={400}
