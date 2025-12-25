@@ -33,7 +33,7 @@ const About = () => {
         </div>
 
         {/* Right side --> Image */}
-        <div >
+        <div className="hidden lg:block">
           <PixelatedCanvas
             src={headshot}
             width={400}
