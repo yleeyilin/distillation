@@ -5,7 +5,7 @@ import headshot from '../assets/headshot.jpg';
 
 const About = () => {
   const who = (
-    <p className="text-xl">
+    <p className="text-lg sm:text-xl">
       I am currently a <b>final year computer science student </b> at NUS,
       specialising in parallel computing and software engineering. Outside of
       school, I also love building projects and experimenting with{" "}
@@ -14,7 +14,7 @@ const About = () => {
   );
 
   const tools = (
-    <p className="text-xl">
+    <p className="text-lg sm:text-xl">
       Here are some technologies I have been working with:
     </p>
   );
@@ -24,11 +24,13 @@ const About = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-3/5 items-center">
         {/* Left side --> about text */}
         <div className="space-y-2 px-5">
-          <span className="section-title bg-clip-text text-transparent bg-linear-to-r from-green-700 to-blue-700 font-bold">
+          <span className="text-xl sm:text-4xl section-title bg-clip-text text-transparent bg-linear-to-r from-green-700 to-blue-700 font-bold">
             / about me
           </span>
-          <div className="flex"></div>
-          {[who, <div className="flex"></div>, tools]}
+
+          {who}
+          {tools}
+
           <IconCard />
         </div>
 
