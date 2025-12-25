@@ -6,16 +6,47 @@ import headshot from '../assets/headshot.jpg';
 const About = () => {
   const who = (
     <p className="text-lg sm:text-xl">
-      I am currently a <b>final year computer science student </b> at NUS,
+      I am currently a final year computer science student at NUS,
       specialising in parallel computing and software engineering. Outside of
       school, I also love building projects and experimenting with{" "}
-      <b>scalable systems, cool algorithms, and new technologies</b>!
+      scalable systems, cool algorithms, and new technologies!
     </p>
   );
 
+  const languages = (
+    <p className="text-lg sm:text-xl">
+      Languages:
+      {/* display languages */}
+      <IconCard/>
+    </p>
+  );
+
+  const backendTools = ["OpenMP", "OpenMPI", "Langchain"];
+  const appTools = ["React", "Flutter", "Jetpack Compose"];
+
   const tools = (
     <p className="text-lg sm:text-xl">
-      Here are some languages I have been working with:
+      Tools I have experience with:
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 space-y-4">
+        <ul className="space-y-2">
+          {backendTools.map((tech) => (
+            <li key={tech} className="flex items-center space-x-2">
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">{'\u25B6'}</span> 
+              <span className="text-lg">{tech}</span>
+            </li>
+          ))}
+        </ul>
+
+        <ul className="space-y-2">
+          {appTools.map((tech) => (
+            <li key={tech} className="flex items-center space-x-2">
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">{'\u25B6'}</span>
+              <span className="text-lg">{tech}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </p>
   );
 
@@ -28,11 +59,11 @@ const About = () => {
             / about me
           </span>
 
-          {who}
-          {tools}
-
-          {/* display languages */}
-          <IconCard />
+          <div className="flex flex-col space-y-4">
+            {who}
+            {tools}
+            {languages}
+          </div>
         </div>
 
         {/* Right side --> Image */}
