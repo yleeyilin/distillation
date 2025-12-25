@@ -21,9 +21,9 @@ const About = () => {
 
   return (
     <section className="min-h-screen grid place-items-center">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-3/5 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-4/5 sm:w-3/5 items-center">
         {/* Left side --> about text */}
-        <div className="space-y-2 px-5">
+        <div>
           <span className="text-xl sm:text-4xl section-title bg-clip-text text-transparent bg-linear-to-r from-green-700 to-blue-700 font-bold">
             / about me
           </span>
