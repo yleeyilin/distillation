@@ -32,7 +32,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen">
+    <section className="grid min-h-screen place-items-center">
       {/* Mobile home animation */}
       <BackgroundBeamsWithCollision>
         <Canvas
