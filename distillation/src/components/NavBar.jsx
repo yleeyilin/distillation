@@ -16,7 +16,7 @@ const NavBar = () => {
       </div>
 
       {/* Nav links */}
-      <nav className="justify-self-center flex text-lg gap-10 font-medium border border-blue-900 rounded-full px-10 items-center p-4 hover:border-gray-200 transition-all duration-300 ease-in-out">
+      <nav className="justify-self-center flex text-xs sm:text-lg gap-10 font-medium border border-blue-900 rounded-full px-10 items-center p-4 hover:border-gray-200 transition-all duration-300 ease-in-out">
         <NavLink to="/">
           <p
             className="relative 
