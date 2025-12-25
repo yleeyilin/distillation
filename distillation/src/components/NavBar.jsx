@@ -16,45 +16,47 @@ const NavBar = () => {
       </div>
 
       {/* Nav links */}
-      <nav className="justify-self-center flex text-xs sm:text-lg gap-10 font-medium border border-blue-900 rounded-full px-10 items-center p-4 hover:border-gray-200 transition-all duration-300 ease-in-out">
-        <NavLink to="/">
-          <p
-            className="relative 
-                            after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
-                            after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
-                            hover:after:scale-x-100 text-gray-200"
-          >
-            Home
-          </p>
-        </NavLink>
-        <NavLink to="/about">
-          <p
-            className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
-                            after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
-                            hover:after:scale-x-100 text-gray-200"
-          >
-            About
-          </p>
-        </NavLink>
-        <NavLink to="/experience">
-          <p
-            className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
-                            after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
-                            hover:after:scale-x-100 text-gray-200"
-          >
-            Experience
-          </p>
-        </NavLink>
-        <NavLink to="/projects">
-          <p
-            className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
-                            after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
-                            hover:after:scale-x-100 text-gray-200"
-          >
-            Projects
-          </p>
-        </NavLink>
-      </nav>
+      <div className="hidden sm:block">
+        <nav className="justify-self-center flex text-xs sm:text-lg gap-10 font-medium border border-blue-900 rounded-full px-10 items-center p-4 hover:border-gray-200 transition-all duration-300 ease-in-out">
+          <NavLink to="/">
+            <p
+              className="relative 
+                              after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
+                              after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
+                              hover:after:scale-x-100 text-gray-200"
+            >
+              Home
+            </p>
+          </NavLink>
+          <NavLink to="/about">
+            <p
+              className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
+                              after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
+                              hover:after:scale-x-100 text-gray-200"
+            >
+              About
+            </p>
+          </NavLink>
+          <NavLink to="/experience">
+            <p
+              className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
+                              after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
+                              hover:after:scale-x-100 text-gray-200"
+            >
+              Experience
+            </p>
+          </NavLink>
+          <NavLink to="/projects">
+            <p
+              className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
+                              after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
+                              hover:after:scale-x-100 text-gray-200"
+            >
+              Projects
+            </p>
+          </NavLink>
+        </nav>
+      </div>
 
       {/* Social icons */}
       <nav className="justify-self-end flex gap-5">
