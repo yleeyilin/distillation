@@ -34,7 +34,7 @@ const About = () => {
               <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">
                 {"\u25B7"}
               </span>
-              <span className="text-base">{tech}</span>
+              <span className="text-sm sm:text-base">{tech}</span>
             </li>
           ))}
         </ul>
@@ -45,7 +45,7 @@ const About = () => {
               <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">
                 {"\u25B7"}
               </span>
-              <span className="text-base">{tech}</span>
+              <span className="text-sm sm:text-base">{tech}</span>
             </li>
           ))}
         </ul>
