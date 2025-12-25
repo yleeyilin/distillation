@@ -39,7 +39,7 @@ const About = () => {
             width={400}
             height={500}
             cellSize={3}
-            dotScale={0.9}
+            dotScale={0.7}
             shape="square"
             backgroundColor="#000000"
             dropoutStrength={0}
