@@ -2,19 +2,21 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <header className="header flex justify-between items-center px-10 py-5 bg-black/80 backdrop-blur-md z-50">
+    <header className="grid grid-cols-1 lg:grid-cols-3 items-center px-10 py-5 bg-black/80 backdrop-blur-md z-50">
       {/* Logo */}
-      <NavLink
-        to="/"
-        className="text-3xl rounded-lg items-center justify-center flex font-bold"
-      >
-        <p className="logo-title bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700 ">
-          Yi Lin Lee
-        </p>
-      </NavLink>
+      <div className="justify-self-start hidden lg:block">
+        <NavLink
+          to="/"
+          className="text-3xl rounded-lg items-center justify-center font-bold hidden lg:block"
+        >
+          <p className="logo-title bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700 ">
+            Yi Lin Lee
+          </p>
+        </NavLink>
+      </div>
 
       {/* Nav links */}
-      <nav className="flex text-lg gap-10 font-medium border border-blue-900 rounded-full px-10 items-center p-4 hover:border-gray-200 transition-all duration-300 ease-in-out">
+      <nav className="justify-self-center flex text-lg gap-10 font-medium border border-blue-900 rounded-full px-10 items-center p-4 hover:border-gray-200 transition-all duration-300 ease-in-out">
         <NavLink to="/">
           <p
             className="relative 
@@ -55,13 +57,13 @@ const NavBar = () => {
       </nav>
 
       {/* Social icons */}
-      <nav className="flex gap-5">
+      <nav className="justify-self-end flex gap-5">
         {/* linkedin */}
         <a
           href="https://www.linkedin.com/in/yilinnlee"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:bg-blue-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out"
+          className="hover:bg-blue-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out hidden lg:block"
         >
           <svg
             className="w-6 h-6 text-gray-500 dark:text-white hover:scale-120"
@@ -86,7 +88,7 @@ const NavBar = () => {
           href="https://github.com/yleeyilin"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:bg-blue-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out"
+          className="hover:bg-blue-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out hidden lg:block"
         >
           <svg
             class="w-6 h-6 text-gray-500 dark:text-white hover:scale-120"
@@ -110,7 +112,7 @@ const NavBar = () => {
           href="mailto:leeyilin@u.nus.edu"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:bg-blue-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out"
+          className="hover:bg-blue-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out hidden lg:block"
         >
           <svg
             className="w-6 h-6 text-gray-500 dark:text-white hover:scale-120"
