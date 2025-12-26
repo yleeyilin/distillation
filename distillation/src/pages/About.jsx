@@ -5,7 +5,7 @@ import headshot from "../assets/headshot.jpg";
 
 const About = () => {
   const who = (
-    <p className="text-white text-base sm:text-lg">
+    <p className="text-neutral-200 text-xs sm:text-lg">
       I am currently a final year computer science student at NUS, specialising
       in parallel computing and software engineering. Outside of school, I also
       love building projects and experimenting with scalable systems, cool
@@ -14,7 +14,7 @@ const About = () => {
   );
 
   const languages = (
-    <p className="text-white text-base sm:text-lg">
+    <p className="text-neutral-200 text-xs sm:text-lg">
       Languages:
       {/* display languages */}
       <IconCard />
@@ -25,7 +25,7 @@ const About = () => {
   const appTools = ["React", "Flutter", "Jetpack Compose"];
 
   const tools = (
-    <p className="text-white text-base sm:text-lg">
+    <p className="text-neutral-200 text-xs sm:text-lg">
       Tools I have experience with:
       <div className="grid grid-cols-2 gap-6 space-y-4">
         <ul className="space-y-2">
@@ -34,7 +34,7 @@ const About = () => {
               <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">
                 {"\u25B7"}
               </span>
-              <span className="text-white text-sm sm:text-base">{tech}</span>
+              <span className="text-neutral-200 text-xs sm:text-base">{tech}</span>
             </li>
           ))}
         </ul>
@@ -45,7 +45,7 @@ const About = () => {
               <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">
                 {"\u25B7"}
               </span>
-              <span className="text-white text-sm sm:text-base">{tech}</span>
+              <span className="text-neutral-200 text-xs sm:text-base">{tech}</span>
             </li>
           ))}
         </ul>
