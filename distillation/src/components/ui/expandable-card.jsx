@@ -61,7 +61,7 @@ export function ExpandableCard() {
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.id}`}
-                      className="font-bold text-neutral-700 dark:text-neutral-200">
+                      className="font-bold text-white text-base">
                       {active.title}
                     </motion.h3>
                     <motion.p
@@ -72,7 +72,7 @@ export function ExpandableCard() {
                   </div>
                   <motion.p
                     layoutId={`date-${active.id}`}
-                    className="px-4 py-3 text-sm rounded-full font-bold text-white">
+                    className="px-4 py-3 text-sm rounded-full font-bold text-neutral-400">
                     {active.ctaText}
                   </motion.p>
                 </div>
@@ -112,19 +112,19 @@ export function ExpandableCard() {
               <div className="">
                 <motion.h3
                   layoutId={`title-${card.id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left">
+                  className="text-white font-medium text-center md:text-left">
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left">
+                  className="text-neutral-400 font-medium text-center md:text-left">
                   {card.description}
                 </motion.p>
               </div>
             </div>
             <motion.p
               layoutId={`date-${card.id}`}
-              className="px-4 py-3 text-sm rounded-full font-bold text-white">
+              className="px-3 py-3 text-sm rounded-full font-bold text-neutral-600">
               {card.ctaText}
             </motion.p>
           </motion.div>
