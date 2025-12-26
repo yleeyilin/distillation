@@ -46,15 +46,15 @@ export function ExpandableCard() {
             <motion.div
               layoutId={`card-${active.id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden">
-              <motion.div layoutId={`image-${active.id}`}>
-                <img
-                  width={200}
-                  height={200}
-                  src={active.src}
-                  alt={active.title}
-                  className="w-0.5 h-0.5 sm:rounded-tr-lg sm:rounded-tl-lg" />
-              </motion.div>
+              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden">
+                <motion.div layoutId={`image-${active.id}`}>
+                  <img
+                    width={200}
+                    height={200}
+                    src={active.src}
+                    alt={active.title}
+                    className="w-0.5 h-0.5 sm:rounded-tr-lg sm:rounded-tl-lg" />
+                </motion.div>
 
               <div>
                 <div className="flex justify-between items-start p-4">
@@ -101,7 +101,7 @@ export function ExpandableCard() {
             onClick={() => setActive(card)}
             className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer">
             <div className="flex gap-4 flex-col md:flex-row ">
-              <motion.div layoutId={`image-${card.id}`}>
+              <motion.div className="flex items-center justify-center" layoutId={`image-${card.id}`}>
                 <img
                   width={100}
                   height={100}

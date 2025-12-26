@@ -138,7 +138,7 @@ export const CardSkeletonContainer = ({
         "h-20 rounded-xl z-40",
         className,
         showGradient &&
-          "bg-neutral-300 dark:bg-[rgba(40,40,40,0.70)] mask-[radial-gradient(70%_90%_at_50%_50%,white_0%,transparent_100%)]",
+          "bg-neutral-300 dark:bg-[rgba(40,40,40,0.70)] mask-[radial-gradient(70%_70%_at_50%_50%,white_0%,transparent_100%)]",
       )}
     >
       {children}
