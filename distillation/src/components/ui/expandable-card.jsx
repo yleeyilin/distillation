@@ -53,7 +53,7 @@ export function ExpandableCard() {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top" />
+                  className="w-0.5 h-0.5 sm:rounded-tr-lg sm:rounded-tl-lg" />
               </motion.div>
 
               <div>
@@ -107,7 +107,7 @@ export function ExpandableCard() {
                   height={100}
                   src={card.src}
                   alt={card.title}
-                  className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top" />
+                  className="h-20 md:h-10 w-20 md:w-10 rounded-lg" /> 
               </motion.div>
               <div className="">
                 <motion.h3
@@ -133,38 +133,6 @@ export function ExpandableCard() {
     </>
   );
 }
-
-export const CloseIcon = () => {
-  return (
-    <motion.svg
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      exit={{
-        opacity: 0,
-        transition: {
-          duration: 0.05,
-        },
-      }}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-4 w-4 text-black">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M18 6l-12 12" />
-      <path d="M6 6l12 12" />
-    </motion.svg>
-  );
-};
 
 const cards = [
   {

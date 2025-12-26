@@ -9,7 +9,7 @@ const Experience = () => {
           <span className="text-xl sm:text-4xl section-title bg-clip-text text-transparent bg-linear-to-r from-green-700 to-blue-700 font-bold">
             / experience
           </span>
-          <ExpandableCard />
+          <ExpandableCard/>
         </div>
       </div>
     </section>
