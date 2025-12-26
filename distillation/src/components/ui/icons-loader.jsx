@@ -138,7 +138,7 @@ export const CardSkeletonContainer = ({
         "h-20 rounded-xl z-40",
         className,
         showGradient &&
-          "bg-[rgba(40,40,40,0.70)] mask-[radial-gradient(50%_50%_at_50%_50%,white_0%,transparent_100%)]",
+          "bg-neutral-300 dark:bg-[rgba(40,40,40,0.70)] mask-[radial-gradient(70%_90%_at_50%_50%,white_0%,transparent_100%)]",
       )}
     >
       {children}
@@ -150,8 +150,8 @@ const Container = ({ className, children }) => {
   return (
     <div
       className={cn(
-        `h-16 w-16 rounded-full flex items-center justify-center bg-[rgba(248,248,248,0.01)]
-    shadow-[0px_0px_8px_0px_rgba(248,248,248,0.25)_inset,0px_32px_24px_-16px_rgba(0,0,0,0.40)]
+        `h-16 w-16 rounded-full flex items-center justify-center bg-[rgba(248,248,248,0.1)]
+    shadow-[0px_0px_8px_0px_rgba(248,248,248,0.4)_inset,0px_32px_24px_-16px_rgba(0,0,0,0.40)]
     `,
         className,
       )}
