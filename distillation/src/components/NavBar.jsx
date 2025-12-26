@@ -66,7 +66,7 @@ const NavBar = () => {
           className="hover:bg-blue-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out hidden lg:block"
         >
           <svg
-            className="w-6 h-6 text-gray-500 dark:text-white hover:scale-120"
+            className="w-6 h-6 text-white hover:scale-120"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -91,7 +91,7 @@ const NavBar = () => {
           className="hover:bg-blue-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out hidden lg:block"
         >
           <svg
-            class="w-6 h-6 text-gray-500 dark:text-white hover:scale-120"
+            class="w-6 h-6 text-white hover:scale-120"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -115,7 +115,7 @@ const NavBar = () => {
           className="hover:bg-blue-900 rounded-full px-1 py-1 transition-all duration-300 ease-in-out hidden lg:block"
         >
           <svg
-            className="w-6 h-6 text-gray-500 dark:text-white hover:scale-120"
+            className="w-6 h-6 text-white hover:scale-120"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"

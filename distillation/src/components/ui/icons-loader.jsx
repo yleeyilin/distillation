@@ -67,13 +67,13 @@ const Skeleton = () => {
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row shrink-0 justify-center items-center gap-2">
         <Container className="h-12 w-12 python">
-          <PythonLogo className="h-6 w-6 dark:text-white" />
+          <PythonLogo className="h-6 w-6 text-white" />
         </Container>
         <Container className="h-12 w-12 java">
-          <JavaLogo className="h-6 w-6 dark:text-white" />
+          <JavaLogo className="h-6 w-6 text-white" />
         </Container>
         <Container className="h-12 w-12 cpp">
-          <CppLogo className="h-6 w-6 dark:text-white" />
+          <CppLogo className="h-6 w-6 text-white" />
         </Container>
         <Container className="h-12 w-12 cuda">
           <CudaLogo className="h-6 w-6 " />
@@ -120,7 +120,7 @@ const Sparkles = () => {
             borderRadius: "50%",
             zIndex: 1,
           }}
-          className="inline-block bg-black dark:bg-white"
+          className="inline-block bg-white"
         ></motion.span>
       ))}
     </div>
@@ -138,7 +138,7 @@ export const CardSkeletonContainer = ({
         "h-20 rounded-xl z-40",
         className,
         showGradient &&
-          "bg-neutral-300 dark:bg-[rgba(40,40,40,0.70)] mask-[radial-gradient(50%_50%_at_50%_50%,white_0%,transparent_100%)]",
+          "bg-[rgba(40,40,40,0.70)] mask-[radial-gradient(50%_50%_at_50%_50%,white_0%,transparent_100%)]",
       )}
     >
       {children}

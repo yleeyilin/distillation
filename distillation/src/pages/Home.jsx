@@ -51,7 +51,7 @@ const Home = () => {
         <EncryptedText
           text="hi,"
           encryptedClassName="text-neutral-500"
-          revealedClassName="dark:text-white text-black"
+          revealedClassName="text-white"
           revealDelayMs={50}
         />{" "}
         <EncryptedText
@@ -63,7 +63,7 @@ const Home = () => {
         <EncryptedText
           text="here."
           encryptedClassName="text-neutral-500"
-          revealedClassName="dark:text-white text-black"
+          revealedClassName="text-white"
           revealDelayMs={250}
         />
         {showCursor && (
