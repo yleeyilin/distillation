@@ -10,7 +10,7 @@ const Experience = () => {
       <span className="text-white"> deep tech </span> to 
       <span className="text-white"> large-scale infrastructure </span> at Google. 
       I'm interested in how software adapts to different environments, whether that is 
-      optimising for resource constrains or building infrastructure systems at scale.
+      optimising for resource constraints or building infrastructure systems at scale.
       <br />
       <br />
     </p>
