@@ -4,7 +4,7 @@ import { Spotlight } from "../components/ui/spotlight";
 
 const Experience = () => {
   const blurb = (
-    <p className="text-neutral-300 text-base sm:text-xl leading-snug">
+    <p className="text-neutral-300 text-xs sm:text-lg leading-snug">
       My work spans various technical constraints, from 
       <span className="text-white"> finance </span> and 
       <span className="text-white"> deep tech </span> to 
