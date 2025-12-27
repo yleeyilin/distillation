@@ -7,8 +7,8 @@ const About = () => {
   const who = (
     <p className="text-neutral-200 text-xs sm:text-lg">
       I am currently a final year computer science student at NUS, specialising
-      in parallel computing and software engineering. Outside of school, I also
-      love building projects and experimenting with scalable systems, cool
+      in parallel computing and software engineering. Outside of school, I am
+      passionate about building projects and experimenting with scalable systems, cool
       algorithms, and new technologies!
     </p>
   );

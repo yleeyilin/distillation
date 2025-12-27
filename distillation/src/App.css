@@ -49,7 +49,21 @@
 @import "tailwindcss";
 
 @theme inline {
+  /* animation utilities here */
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
   --animate-move: move 5s linear infinite;
+
+  /* keyframes here */
+  @keyframes spotlight {
+    0% {
+      opacity: 0;
+      transform: translate(-72%, -62%) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -40%) scale(1);
+    }
+  }
 
   @keyframes move {
     0% {

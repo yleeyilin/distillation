@@ -133,7 +133,7 @@ function App() {
   const [direction, setDirection] = useState("forward");
 
   return (
-    <main className="bg-black min-h-screen overflow-hidden">
+    <main className="bg-black min-h-screen overflow-y-auto">
       <BrowserRouter>
         <ScrollDirectionContext.Provider value={direction}>
           <ScrollHandlerWithContext setDirection={setDirection} />
