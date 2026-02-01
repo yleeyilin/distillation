@@ -1,5 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { logoContents } from "../components/Logo";
+import styles from "./NavBar.module.css"; 
+
+const navlinks = [
+  { route:"/", name:"Home"},
+  { route:"/about", name:"About" },
+  { route:"/experience", name:"Experience"},
+  { route:"/projects", name:"Projects" },
+]
 
 const NavBar = () => {
   return (
@@ -17,44 +25,16 @@ const NavBar = () => {
       </div>
 
       {/* Nav links */}
-      <nav className="justify-self-center flex text-xs sm:text-lg gap-10 font-medium border border-gray-600 lg:border-blue-900 rounded-full px-10 items-center p-4 hover:border-gray-200 transition-all duration-300 ease-in-out">
-        <NavLink to="/">
-          <p
-            className="relative 
-                            after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
-                            after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
-                            hover:after:scale-x-100 text-gray-200"
-          >
-            Home
-          </p>
-        </NavLink>
-        <NavLink to="/about">
-          <p
-            className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
-                            after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
-                            hover:after:scale-x-100 text-gray-200"
-          >
-            About
-          </p>
-        </NavLink>
-        <NavLink to="/experience">
-          <p
-            className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
-                            after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
-                            hover:after:scale-x-100 text-gray-200"
-          >
-            Experience
-          </p>
-        </NavLink>
-        <NavLink to="/projects">
-          <p
-            className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full 
-                            after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300
-                            hover:after:scale-x-100 text-gray-200"
-          >
-            Projects
-          </p>
-        </NavLink>
+      <nav className={styles.navbar}>
+        {
+          navlinks.map(nl => (
+            <NavLink to={nl.route}>
+              <p className={styles.link}>
+                {nl.name}
+              </p>
+            </NavLink>
+          ))
+        }
       </nav>
 
       {/* Social icons */}
