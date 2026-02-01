@@ -7,19 +7,33 @@ import styles from "./About.module.css";
 
 const About = () => {
   const who = (
-    <p className="text-neutral-200 text-xs sm:text-lg">
-      I am currently a final year computer science student at NUS, specialising
-      in parallel computing and software engineering. Outside of school, I am
-      passionate about building projects and experimenting with scalable systems, cool
-      algorithms, and new technologies!
-    </p>
+    <div className="grid gap-4">
+      <p className="text-neutral-300 text-xs sm:text-lg">
+        I am currently a 
+        <span className="text-neutral-200 font-bold"> final year computer science student </span>
+        at 
+        <span className="text-cyan-400 font-semibold"> NUS </span>
+        , specialising in 
+        <span className="text-purple-400 font-semibold"> parallel computing </span>
+        and 
+        <span className="text-purple-400 font-semibold"> software engineering </span>.
+      </p>
+      <p className="text-neutral-300 text-xs sm:text-lg">
+        Outside of school, I am passionate about building projects and experimenting 
+        with 
+        <span className="text-neutral-200 font-semibold"> scalable systems</span>, 
+        <span className="text-neutral-200 font-semibold"> cool algorithms</span>, 
+        and 
+        <span className="text-neutral-200 font-semibold"> new technologies</span>!
+      </p>
+    </div>
   );
 
   const languages = (
     <p className="text-neutral-200 text-xs sm:text-lg">
       <div className="flex items-center gap-2 mb-4">
-        <Layers className="w-6 h-6 bg-clip-text text-green-600" />
-        <span className="font-bold"> Languages:</span>
+        <Layers className="w-6 h-6" />
+        <span className="font-bold">Languages:</span>
       </div>
       <IconCard />
     </p>
@@ -31,8 +45,8 @@ const About = () => {
   const tools = (
     <p className="text-neutral-200 text-xs sm:text-lg">
       <div className="flex items-center gap-2 mb-4">
-        <Code2 className="w-7 h-7 bg-clip-text text-green-600" />
-        <span className="font-bold"> Tools & Frameworks:</span>
+        <Code2 className="w-7 h-7" />
+        <span className="font-bold">Tools & Frameworks:</span>
       </div>
       <div className="grid grid-cols-2 gap-6 space-y-4">
         <ul className="space-y-2">
@@ -64,7 +78,7 @@ const About = () => {
     <section className="min-h-screen grid place-items-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-4/5 sm:w-3/5 items-center">
         {/* Left side --> about text */}
-        <div>
+        <div className="grid gap-6">
           <span className={styles.sectionTitle}>
             / about me
           </span>

@@ -15,7 +15,7 @@
   background-clip: text;
 
   /* bg-linear-to-r from-green-700 to-blue-700 */
-  background-image: linear-gradient(to right, rgb(21, 128, 61), rgb(29, 78, 216));
+  background-image: linear-gradient(to right, rgb(39, 187, 187), rgb(185, 29, 216));
 
   /* helps the gradient behave nicely on inline elements */
   display: inline-block;
