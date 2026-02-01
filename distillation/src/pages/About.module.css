@@ -1,0 +1,29 @@
+.sectionTitle {
+  /* text-xl */
+  font-size: 1.25rem; /* 20px */
+
+  /* font-mono */
+  font-family: "Consolas", monospace;
+  font-weight: bold;
+
+  /* tracking-wider */
+  letter-spacing: 0.05em;
+
+  /* bg-clip-text + text-transparent */
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* bg-linear-to-r from-green-700 to-blue-700 */
+  background-image: linear-gradient(to right, rgb(21, 128, 61), rgb(29, 78, 216));
+
+  /* helps the gradient behave nicely on inline elements */
+  display: inline-block;
+}
+
+/* sm:text-4xl */
+@media (min-width: 640px) {
+  .sectionTitle {
+    font-size: 2.25rem; /* 36px */
+  }
+}

@@ -2,6 +2,8 @@ import React from "react";
 import { IconCard } from "../components/ui/icons-loader";
 import { PixelatedCanvas } from "../components/ui/pixelated-canvas";
 import headshot from "../assets/headshot.jpg";
+import { Code2, Layers} from "lucide-react";
+import styles from "./About.module.css";
 
 const About = () => {
   const who = (
@@ -15,8 +17,10 @@ const About = () => {
 
   const languages = (
     <p className="text-neutral-200 text-xs sm:text-lg">
-      Languages:
-      {/* display languages */}
+      <div className="flex items-center gap-2 mb-4">
+        <Layers className="w-6 h-6 bg-clip-text text-green-600" />
+        <span className="font-bold"> Languages:</span>
+      </div>
       <IconCard />
     </p>
   );
@@ -26,7 +30,10 @@ const About = () => {
 
   const tools = (
     <p className="text-neutral-200 text-xs sm:text-lg">
-      Tools I have experience with:
+      <div className="flex items-center gap-2 mb-4">
+        <Code2 className="w-7 h-7 bg-clip-text text-green-600" />
+        <span className="font-bold"> Tools & Frameworks:</span>
+      </div>
       <div className="grid grid-cols-2 gap-6 space-y-4">
         <ul className="space-y-2">
           {backendTools.map((tech) => (
@@ -58,7 +65,7 @@ const About = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-4/5 sm:w-3/5 items-center">
         {/* Left side --> about text */}
         <div>
-          <span className="text-xl sm:text-4xl section-title bg-clip-text text-transparent bg-linear-to-r from-green-700 to-blue-700 font-bold">
+          <span className={styles.sectionTitle}>
             / about me
           </span>
 

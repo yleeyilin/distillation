@@ -1,6 +1,7 @@
 import React from "react";
 import { ExpandableCard } from "../components/ui/expandable-card";
 import { Spotlight } from "../components/ui/spotlight";
+import styles from "./About.module.css"
 
 const Experience = () => {
   const blurb = (
@@ -23,7 +24,7 @@ const Experience = () => {
         fill="white"
       />
         <div>
-          <span className="text-xl sm:text-4xl section-title bg-clip-text text-transparent bg-linear-to-r from-green-700 to-blue-700 font-bold">
+          <span className={styles.sectionTitle}>
             / experience
           </span>
           <div className="flex flex-col space-y-4">
