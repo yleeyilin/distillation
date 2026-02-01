@@ -30,7 +30,7 @@ const About = () => {
   const languages = (
     <p className="text-neutral-200 text-xs sm:text-lg">
       <div className="flex items-center gap-2 mb-4">
-        <Layers className="w-6 h-6" />
+        <Layers className="w-4 h-4 text-cyan-600" />
         <span className="font-bold">Languages:</span>
       </div>
       <IconCard />
@@ -43,14 +43,14 @@ const About = () => {
   const tools = (
     <p className="text-neutral-200 text-xs sm:text-lg">
       <div className="flex items-center gap-2 mb-4">
-        <Code2 className="w-7 h-7" />
+        <Code2 className="w-5 h-5 text-cyan-600" />
         <span className="font-bold">Tools & Frameworks:</span>
       </div>
       <div className="grid grid-cols-2 gap-6 space-y-4">
         <ul className="space-y-2">
           {backendTools.map((tech) => (
             <li key={tech} className="flex items-center space-x-2">
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-cyan-700 to-purple-700">
+              <span className="text-cyan-400 text-xs font-black">
                 {"\u25B7"}
               </span>
               <span className="text-neutral-200 text-xs sm:text-base">{tech}</span>
@@ -61,7 +61,7 @@ const About = () => {
         <ul className="space-y-2">
           {appTools.map((tech) => (
             <li key={tech} className="flex items-center space-x-2">
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-cyan-700 to-pink-700">
+              <span className="text-cyan-400 text-xs font-black">
                 {"\u25B7"}
               </span>
               <span className="text-neutral-200 text-xs sm:text-base">{tech}</span>
