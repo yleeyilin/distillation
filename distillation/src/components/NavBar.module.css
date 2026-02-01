@@ -48,17 +48,10 @@
 
   background: conic-gradient(
     from 0deg,
-    rgba(34, 211, 238, 0.9) 0deg,
-    rgba(168, 85, 247, 0.9) 120deg,
-    rgba(34, 211, 238, 0.9) 360deg
+    rgba(42, 170, 190, 0.6) 0deg,
+    rgba(73, 25, 118, 0.4) 180deg,
+    rgba(42, 170, 190, 0.6) 360deg
   );
-
-  /* cut out center so only border remains */
-  -webkit-mask: 
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
 
   filter: blur(6px);
   opacity: 0.65;
