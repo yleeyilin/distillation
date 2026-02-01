@@ -20,36 +20,85 @@
 .link:hover::after {
   transform: scaleX(1);     
 }
-
 .navbar {
   justify-self: center;
   display: flex;
   align-items: center;
-  gap: 2.5rem;             
+  gap: 2.5rem;
 
-  font-weight: 500;        
-  font-size: 0.75rem;       
+  font-weight: 500;
+  font-size: 0.75rem;
 
-  border: 1px solid rgb(75, 85, 99); 
-  border-radius: 9999px;    
+  border: 1px solid rgb(75, 85, 99);
+  border-radius: 9999px;
+  padding: 1rem 2.5rem;
 
-  padding: 1rem 2.5rem;    
+  transition: all 300ms ease-in-out;
 
-  transition: all 300ms ease-in-out; 
+  position: relative;
+  isolation: isolate; 
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: -2px;                
+  border-radius: inherit;
+  padding: 2.5px;           
+
+  background: conic-gradient(
+    from 0deg,
+    rgba(34, 211, 238, 0.9) 0deg,
+    rgba(168, 85, 247, 0.9) 120deg,
+    rgba(34, 211, 238, 0.9) 360deg
+  );
+
+  /* cut out center so only border remains */
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  filter: blur(6px);
+  opacity: 0.65;
+
+  animation: ringSpin 1.0s linear infinite;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+
+  background: conic-gradient(
+    from 0deg,
+    rgba(34, 211, 238, 0.9) 60deg,
+    rgba(168, 85, 247, 0.9) 120deg,
+    rgba(34, 211, 238, 0.9) 180deg,
+  );
+
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0.9;
+
+  z-index: -1;
 }
 
 .navbar:hover {
-  border-color: rgb(229, 231, 235);  
+  border-color: rgb(229, 231, 235);
 }
 
 @media (min-width: 640px) {
-  .navbar {
-    font-size: 1.125rem; 
-  }
+  .navbar { font-size: 1.125rem; }
 }
 
 @media (min-width: 1024px) {
-  .navbar {
-    border-color: rgb(30, 58, 138); 
-  }
+  .navbar { border-color: rgb(30, 58, 138); }
 }

@@ -12,9 +12,9 @@ const About = () => {
         I am currently a 
         <span className="text-neutral-200 font-bold"> final year computer science student </span>
         at NUS, specialising in 
-        <span className="bg-clip-text text-transparent bg-linear-to-r from-cyan-500 to-purple-500 font-semibold"> parallel computing </span>
+        <span className="text-cyan-300 font-semibold"> parallel computing </span>
         and 
-        <span className="bg-clip-text text-transparent bg-linear-to-r from-cyan-500 to-purple-500 font-semibold"> software engineering </span>.
+        <span className="text-cyan-300 font-semibold"> software engineering </span>.
       </p>
       <p className="text-neutral-300 text-xs sm:text-lg">
         Outside of school, I am passionate about building projects and experimenting 
