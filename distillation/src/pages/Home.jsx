@@ -58,7 +58,7 @@ const Home = () => {
         <EncryptedText
           text="yilin"
           encryptedClassName="text-neutral-500"
-          revealedClassName="bg-clip-text text-transparent bg-linear-to-r to-cyan-400 from-purple-400 font-bold"
+          revealedClassName="text-cyan-300 font-bold"
           revealDelayMs={150}
         />{" "}
         <EncryptedText

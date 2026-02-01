@@ -11,12 +11,10 @@ const About = () => {
       <p className="text-neutral-300 text-xs sm:text-lg">
         I am currently a 
         <span className="text-neutral-200 font-bold"> final year computer science student </span>
-        at 
-        <span className="text-cyan-400 font-semibold"> NUS </span>
-        , specialising in 
-        <span className="text-purple-400 font-semibold"> parallel computing </span>
+        at NUS, specialising in 
+        <span className="bg-clip-text text-transparent bg-linear-to-r from-cyan-500 to-purple-500 font-semibold"> parallel computing </span>
         and 
-        <span className="text-purple-400 font-semibold"> software engineering </span>.
+        <span className="bg-clip-text text-transparent bg-linear-to-r from-cyan-500 to-purple-500 font-semibold"> software engineering </span>.
       </p>
       <p className="text-neutral-300 text-xs sm:text-lg">
         Outside of school, I am passionate about building projects and experimenting 
@@ -52,7 +50,7 @@ const About = () => {
         <ul className="space-y-2">
           {backendTools.map((tech) => (
             <li key={tech} className="flex items-center space-x-2">
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-cyan-700 to-purple-700">
                 {"\u25B7"}
               </span>
               <span className="text-neutral-200 text-xs sm:text-base">{tech}</span>
@@ -63,7 +61,7 @@ const About = () => {
         <ul className="space-y-2">
           {appTools.map((tech) => (
             <li key={tech} className="flex items-center space-x-2">
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-700 to-green-700">
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-cyan-700 to-pink-700">
                 {"\u25B7"}
               </span>
               <span className="text-neutral-200 text-xs sm:text-base">{tech}</span>
