@@ -19,7 +19,8 @@ const Model = (props) => {
   }, [actions]);
 
   return (
-    <a.group ref={group} {...props}>
+    // <a.group ref={group} {...props}>
+    <a.group ref={group} {...props} rotation={[Math.PI, 0, 0]} position={[0, -1.5, 0]}>
       <a.group name="Sketchfab_Scene">
         <a.group
           name="Object_23"
